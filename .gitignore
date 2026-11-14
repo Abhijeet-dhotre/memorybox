@@ -36,6 +36,23 @@ migrate_working_dir/
 # Symbolication related
 app.*.symbols
 
+# Memory Box — build artifacts that are NOT committed (rebuilt on the
+# build machine; the GitHub snapshot push cannot carry binaries at all):
+# - Android sqlite-vec .so files: rebuild with
+#   spikes/sqlitevec_spike/android/build_vec0.sh (needs the Android NDK).
+android/app/src/main/jniLibs/**/*.so
+# - Windows yt-dlp.exe / ffmpeg.exe: place in windows/tools/ before a
+#   Windows build (see windows/CMakeLists.txt). Never commit the .exe files.
+windows/tools/*.exe
+# - ONNX embedding model + tokenizer (assets/models/): large binaries,
+#   downloaded separately (see lib/api/embeddings.dart).
+assets/models/
+# - Local databases (the app's own .db, test outputs).
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
 # Obfuscation related
 app.*.map.json
 

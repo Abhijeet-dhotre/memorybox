@@ -38,6 +38,20 @@ dependencies:
   # native assets; sqlite3_flutter_libs is obsolete (unmaintained after
   # early 2026) and is NOT used.
   sqlite3: ^3.9.1
+  # App paths, file picking, opening the original video, secure Groq-key
+  # storage, Android share-sheet intake, on-device ONNX embeddings.
+  path: ^1.9.1
+  path_provider: ^2.1.6
+  url_launcher: ^6.3.3
+  file_picker: ^13.3.2
+  flutter_secure_storage: ^11.2.0
+  receive_sharing_intent: ^1.9.0
+  flutter_onnxruntime: ^1.8.1
+  # Hook dependencies (hook/build.dart bundles sqlite-vec as a code asset).
+  code_assets: ^2.2.0
+  hooks: ^2.0.0
+  http: ^1.5.0
+  tar: ^2.0.0
 
 dev_dependencies:
   flutter_test:

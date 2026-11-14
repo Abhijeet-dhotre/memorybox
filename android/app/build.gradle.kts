@@ -19,7 +19,10 @@ android {
         applicationId = "com.memorybox.app.memorybox"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
-        minSdk = flutter.minSdkVersion
+        // minSdk 24: youtubedl-android (on-device yt-dlp + Python runtime)
+        // requires Android 7.0+. Flutter's default is lower; do not lower
+        // this while the yt-dlp bridge is in use.
+        minSdk = 24
         targetSdk = flutter.targetSdkVersion
         // Uses the version code from pubspec.yaml. When using split APKs, 1000 * ABI_VERSION
         // is added automatically by Flutter. (https://developer.android.com/studio/build/configure-apk-splits#configure-APK-versions)
@@ -27,6 +30,12 @@ android {
         // flag during build.
         versionCode = flutter.versionCode
         versionName = flutter.versionName
+
+        // youtubedl-android ships a native Python runtime per ABI; only
+        // these three are built (x86 is emulator-only and is dropped).
+        ndk {
+            abiFilters += listOf("arm64-v8a", "armeabi-v7a", "x86_64")
+        }
     }
 
     buildTypes {
@@ -46,4 +55,14 @@ kotlin {
 
 flutter {
     source = "../.."
+}
+
+dependencies {
+    // On-device yt-dlp + ffmpeg (VibeVault-proven). Bundles CPython +
+    // yt-dlp + QuickJS; used by YtDlpBridge.kt — there is no yt-dlp
+    // executable on Android. 0.18.1 is the version VibeVault ships.
+    // https://github.com/yausername/youtubedl-android
+    val youtubedlAndroid = "0.18.1"
+    implementation("io.github.junkfood02.youtubedl-android:library:$youtubedlAndroid")
+    implementation("io.github.junkfood02.youtubedl-android:ffmpeg:$youtubedlAndroid")
 }

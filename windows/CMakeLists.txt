@@ -106,3 +106,22 @@ install(DIRECTORY "${PROJECT_BUILD_DIR}/${FLUTTER_ASSET_DIR_NAME}"
 install(FILES "${AOT_LIBRARY}" DESTINATION "${INSTALL_BUNDLE_DATA_DIR}"
   CONFIGURATIONS Profile;Release
   COMPONENT Runtime)
+
+# Memory Box: bundle yt-dlp.exe + ffmpeg.exe next to the .exe.
+# The binaries are NOT in this repo (they are executables, not source).
+# Before a Windows build, place them in windows/tools/:
+#   yt-dlp.exe  — https://github.com/yt-dlp/yt-dlp/releases (yt-dlp.exe)
+#   ffmpeg.exe  — https://www.gyan.dev/ffmpeg/builds/ (essentials build)
+# If they are missing, the build still succeeds but Path A/B fail at
+# runtime with a clear "yt-dlp not found" error (see lib/ingest/ytdlp.dart).
+# Do NOT commit the .exe files themselves; windows/tools/ is gitignored.
+foreach(_tool yt-dlp ffmpeg)
+  set(_tool_path "${CMAKE_CURRENT_SOURCE_DIR}/tools/${_tool}.exe")
+  if(EXISTS "${_tool_path}")
+    install(FILES "${_tool_path}" DESTINATION "${CMAKE_INSTALL_PREFIX}"
+      COMPONENT Runtime)
+  else()
+    message(WARNING "Memory Box: windows/tools/${_tool}.exe not found — "
+      "the Windows build will lack ${_tool}; place the binary there first.")
+  endif()
+endforeach()
