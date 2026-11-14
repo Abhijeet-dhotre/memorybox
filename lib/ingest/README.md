@@ -1,12 +1,11 @@
-# ingest — Phase 1 built, Phase 2 completes it
+# ingest — Phase 2 built
 
-- `ytdlp.dart` — `YtDlpRunner`: one Dart API over two platform paths.
-  Desktop (Windows/Linux/macOS): bundled yt-dlp binary via `Process.run`.
-  Android: MethodChannel `memorybox/ytdlp` → `YtDlpBridge.kt`, which uses
-  the VibeVault-proven youtubedl-android library (no yt-dlp executable on
-  Android). Covers Path A (captions only), Path B (temp audio), ffmpeg
-  compress/split, and human-readable yt-dlp errors. No media is ever kept.
-
-Phase 2 adds `captions.dart` (VTT parse), `chunker.dart` (1–2 min chunks),
-and `ingest_service.dart` (dedupe → Path A/B → chunk → Groq summary/tags
-→ embeddings → SQLite save; temp audio deleted in `finally`).
+- `ytdlp.dart` (Phase 1) — yt-dlp runner, desktop + Android bridge.
+- `captions.dart` — WebVTT parser (strips inline tags, merges duplicate
+  auto-caption cues) → timed `CaptionSegment`s.
+- `chunker.dart` — 1–2 min chunks (target 90 s, hard cap 120 s, sentence
+  boundaries where possible, tiny tails merged).
+- `ingest_service.dart` — the pipeline: dedupe → Path A captions → Path B
+  temp audio + Groq Whisper (deleted in `finally`) → chunk → Groq summary
+  / key points / tags / dynamic category → ONNX embeddings when available
+  → one-transaction save. Progress via `IngestStage`.
