@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Apple iOS System Grouped Palette (Light) -->
+    <color name="ios_bg_grouped">#F2F2F7</color>
+    <color name="ios_surface_card">#FFFFFF</color>
+    <color name="ios_fill_search">#E5E5EA</color>
+    <color name="ios_separator">#C6C6C8</color>
+
+    <!-- Typography Hierarchy -->
+    <color name="ios_label_primary">#000000</color>
+    <color name="ios_label_secondary">#6C6C70</color>
+    <color name="ios_label_tertiary">#8E8E93</color>
+
+    <!-- Restrained Accents (System Blue & System Red) -->
+    <color name="ios_tint_blue">#007AFF</color>
+    <color name="ios_tint_blue_subtle">#14007AFF</color>
+    <color name="ios_badge_bg">#F2F2F7</color>
+    <color name="ios_destructive">#FF3B30</color>
+
+    <!-- Legacy mb_* names (referenced from Java) remapped to the iOS palette -->
+    <color name="mb_primary">#007AFF</color>
+    <color name="mb_primary_dark">#0062CC</color>
+    <color name="mb_accent">#007AFF</color>
+    <color name="mb_bg">#F2F2F7</color>
+    <color name="mb_card">#FFFFFF</color>
+    <color name="mb_text">#000000</color>
+    <color name="mb_text_dim">#6C6C70</color>
+    <color name="mb_chip">#E5E5EA</color>
+</resources>

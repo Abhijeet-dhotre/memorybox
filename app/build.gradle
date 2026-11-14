@@ -1,0 +1,94 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.muse.memorybox'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId 'com.muse.memorybox'
+        minSdk 24          // Android 7.0
+        targetSdk 34       // Android 14
+        versionCode 9
+        versionName '1.8'
+
+        // youtubedl-android ships a native Python runtime per ABI.
+        ndk {
+            abiFilters 'arm64-v8a', 'armeabi-v7a', 'x86_64', 'x86'
+        }
+
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+    }
+
+    // One APK per ABI keeps each file small (the Python runtime is the bulk).
+    // A universal APK is produced as well.
+    splits {
+        abi {
+            enable true
+            reset()
+            include 'arm64-v8a', 'armeabi-v7a', 'x86_64', 'x86'
+            universalApk true
+        }
+    }
+
+    buildTypes {
+        debug {
+            // Debug builds keep the default debug signing.
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    // youtubedl-android requires its bundled .so executables (python, ffmpeg,
+    // quickjs) to be extracted to disk so they can be exec'd.
+    packaging {
+        jniLibs {
+            useLegacyPackaging true
+        }
+    }
+
+    lint {
+        abortOnError false
+    }
+}
+
+// youtubedl-android 0.18.1 was built against Kotlin 1.7.22 and pulls
+// kotlin-stdlib-jdk8:1.7.22, whose classes moved into kotlin-stdlib itself
+// in 1.8+ (brought in by appcompat/core-ktx) — dexing fails with duplicate
+// classes unless the whole Kotlin stdlib family is aligned to one version.
+configurations.all {
+    resolutionStrategy {
+        force 'org.jetbrains.kotlin:kotlin-stdlib:1.8.22',
+                'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.22',
+                'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.22',
+                'org.jetbrains.kotlin:kotlin-stdlib-common:1.8.22'
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.core:core:1.12.0'
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
+    // Apple HIG overhaul: Material surfaces (cards) + real spring physics.
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'androidx.dynamicanimation:dynamicanimation:1.0.0'
+
+    // yt-dlp on Android: bundles CPython + the yt-dlp executable.
+    // This is the on-device yt-dlp approach already proven in VibeVault
+    // (PRD §11.1), reused here under the VibeVault framework — native
+    // Java, no cross-platform framework.
+    def youtubedlAndroid = '0.18.1'
+    implementation "io.github.junkfood02.youtubedl-android:library:$youtubedlAndroid"
+    // FFmpeg: enables --extract-audio and audio compression/splitting.
+    implementation "io.github.junkfood02.youtubedl-android:ffmpeg:$youtubedlAndroid"
+
+    testImplementation 'junit:junit:4.13.2'
+}

@@ -1,0 +1,938 @@
+[
+ {
+  "id": "q01",
+  "query": "Claude AI",
+  "group": "exact",
+  "language": "en",
+  "expected": [
+   {
+    "seedId": "s01",
+    "tier": 1
+   },
+   {
+    "seedId": "s02",
+    "tier": 1
+   },
+   {
+    "seedId": "s03",
+    "tier": 1
+   },
+   {
+    "seedId": "s04",
+    "tier": 1
+   },
+   {
+    "seedId": "s36",
+    "tier": 1
+   },
+   {
+    "seedId": "s05",
+    "tier": 2
+   },
+   {
+    "seedId": "s06",
+    "tier": 2
+   }
+  ]
+ },
+ {
+  "id": "q02",
+  "query": "Claude prompting tips",
+  "group": "exact",
+  "language": "en",
+  "expected": [
+   {
+    "seedId": "s02",
+    "tier": 1
+   },
+   {
+    "seedId": "s01",
+    "tier": 1
+   },
+   {
+    "seedId": "s36",
+    "tier": 2
+   }
+  ]
+ },
+ {
+  "id": "q03",
+  "query": "how to use Claude for coding",
+  "group": "exact",
+  "language": "en",
+  "expected": [
+   {
+    "seedId": "s03",
+    "tier": 1
+   },
+   {
+    "seedId": "s01",
+    "tier": 1
+   },
+   {
+    "seedId": "s02",
+    "tier": 2
+   },
+   {
+    "seedId": "s36",
+    "tier": 2
+   }
+  ]
+ },
+ {
+  "id": "q04",
+  "query": "ChatGPT tutorial",
+  "group": "exact",
+  "language": "en",
+  "expected": [
+   {
+    "seedId": "s05",
+    "tier": 1
+   },
+   {
+    "seedId": "s04",
+    "tier": 2
+   },
+   {
+    "seedId": "s01",
+    "tier": 2
+   }
+  ]
+ },
+ {
+  "id": "q05",
+  "query": "python decorators",
+  "group": "exact",
+  "language": "en",
+  "expected": [
+   {
+    "seedId": "s07",
+    "tier": 1
+   },
+   {
+    "seedId": "s33",
+    "tier": 2
+   }
+  ]
+ },
+ {
+  "id": "q06",
+  "query": "build your first Flutter app",
+  "group": "exact",
+  "language": "en",
+  "expected": [
+   {
+    "seedId": "s08",
+    "tier": 1
+   },
+   {
+    "seedId": "s26",
+    "tier": 2
+   }
+  ]
+ },
+ {
+  "id": "q07",
+  "query": "git and github basics",
+  "group": "exact",
+  "language": "en",
+  "expected": [
+   {
+    "seedId": "s09",
+    "tier": 1
+   }
+  ]
+ },
+ {
+  "id": "q08",
+  "query": "SQL joins and group by",
+  "group": "exact",
+  "language": "en",
+  "expected": [
+   {
+    "seedId": "s10",
+    "tier": 1
+   }
+  ]
+ },
+ {
+  "id": "q09",
+  "query": "how to cook perfect pasta",
+  "group": "exact",
+  "language": "en",
+  "expected": [
+   {
+    "seedId": "s11",
+    "tier": 1
+   },
+   {
+    "seedId": "s12",
+    "tier": 2
+   }
+  ]
+ },
+ {
+  "id": "q10",
+  "query": "chicken biryani recipe",
+  "group": "exact",
+  "language": "en",
+  "expected": [
+   {
+    "seedId": "s12",
+    "tier": 1
+   },
+   {
+    "seedId": "s11",
+    "tier": 2
+   }
+  ]
+ },
+ {
+  "id": "q11",
+  "query": "home workout no equipment",
+  "group": "exact",
+  "language": "en",
+  "expected": [
+   {
+    "seedId": "s13",
+    "tier": 1
+   },
+   {
+    "seedId": "s14",
+    "tier": 2
+   },
+   {
+    "seedId": "s34",
+    "tier": 2
+   }
+  ]
+ },
+ {
+  "id": "q12",
+  "query": "index funds compound interest",
+  "group": "exact",
+  "language": "en",
+  "expected": [
+   {
+    "seedId": "s15",
+    "tier": 1
+   },
+   {
+    "seedId": "s16",
+    "tier": 2
+   }
+  ]
+ },
+ {
+  "id": "q13",
+  "query": "GATE study plan",
+  "group": "exact",
+  "language": "en",
+  "expected": [
+   {
+    "seedId": "s21",
+    "tier": 1
+   },
+   {
+    "seedId": "s22",
+    "tier": 2
+   },
+   {
+    "seedId": "s32",
+    "tier": 2
+   }
+  ]
+ },
+ {
+  "id": "q14",
+  "query": "algorithms and data structures for GATE",
+  "group": "exact",
+  "language": "en",
+  "expected": [
+   {
+    "seedId": "s22",
+    "tier": 1
+   },
+   {
+    "seedId": "s21",
+    "tier": 2
+   }
+  ]
+ },
+ {
+  "id": "q15",
+  "query": "how the internet works DNS",
+  "group": "exact",
+  "language": "en",
+  "expected": [
+   {
+    "seedId": "s24",
+    "tier": 1
+   }
+  ]
+ },
+ {
+  "id": "q16",
+  "query": "Claude",
+  "group": "mangled",
+  "language": "en",
+  "expected": [
+   {
+    "seedId": "s01",
+    "tier": 1
+   },
+   {
+    "seedId": "s02",
+    "tier": 1
+   },
+   {
+    "seedId": "s03",
+    "tier": 1
+   },
+   {
+    "seedId": "s04",
+    "tier": 1
+   },
+   {
+    "seedId": "s36",
+    "tier": 1
+   },
+   {
+    "seedId": "s25",
+    "tier": 2
+   }
+  ]
+ },
+ {
+  "id": "q17",
+  "query": "Claude vs ChatGPT comparison",
+  "group": "mangled",
+  "language": "en",
+  "expected": [
+   {
+    "seedId": "s04",
+    "tier": 1
+   },
+   {
+    "seedId": "s05",
+    "tier": 2
+   },
+   {
+    "seedId": "s01",
+    "tier": 2
+   }
+  ]
+ },
+ {
+  "id": "q18",
+  "query": "Claude coding assistant app building",
+  "group": "mangled",
+  "language": "en",
+  "expected": [
+   {
+    "seedId": "s03",
+    "tier": 1
+   },
+   {
+    "seedId": "s01",
+    "tier": 1
+   },
+   {
+    "seedId": "s36",
+    "tier": 2
+   }
+  ]
+ },
+ {
+  "id": "q19",
+  "query": "Claude AI guide beginners",
+  "group": "mangled",
+  "language": "en",
+  "expected": [
+   {
+    "seedId": "s01",
+    "tier": 1
+   },
+   {
+    "seedId": "s36",
+    "tier": 1
+   },
+   {
+    "seedId": "s02",
+    "tier": 1
+   },
+   {
+    "seedId": "s03",
+    "tier": 2
+   }
+  ]
+ },
+ {
+  "id": "q20",
+  "query": "Claude prompts that work",
+  "group": "mangled",
+  "language": "en",
+  "expected": [
+   {
+    "seedId": "s02",
+    "tier": 1
+   },
+   {
+    "seedId": "s01",
+    "tier": 1
+   },
+   {
+    "seedId": "s36",
+    "tier": 2
+   }
+  ]
+ },
+ {
+  "id": "q21",
+  "query": "Claude writing long documents",
+  "group": "mangled",
+  "language": "en",
+  "expected": [
+   {
+    "seedId": "s04",
+    "tier": 1
+   },
+   {
+    "seedId": "s01",
+    "tier": 1
+   },
+   {
+    "seedId": "s02",
+    "tier": 2
+   }
+  ]
+ },
+ {
+  "id": "q22",
+  "query": "Claude artifacts projects",
+  "group": "mangled",
+  "language": "en",
+  "expected": [
+   {
+    "seedId": "s01",
+    "tier": 1
+   },
+   {
+    "seedId": "s02",
+    "tier": 2
+   }
+  ]
+ },
+ {
+  "id": "q23",
+  "query": "Claude debugging code errors",
+  "group": "mangled",
+  "language": "en",
+  "expected": [
+   {
+    "seedId": "s03",
+    "tier": 1
+   },
+   {
+    "seedId": "s36",
+    "tier": 2
+   },
+   {
+    "seedId": "s02",
+    "tier": 2
+   }
+  ]
+ },
+ {
+  "id": "q24",
+  "query": "Claude AI assistant Anthropic",
+  "group": "mangled",
+  "language": "en",
+  "expected": [
+   {
+    "seedId": "s01",
+    "tier": 1
+   },
+   {
+    "seedId": "s04",
+    "tier": 2
+   },
+   {
+    "seedId": "s02",
+    "tier": 2
+   }
+  ]
+ },
+ {
+  "id": "q25",
+  "query": "Claude for students notes study",
+  "group": "mangled",
+  "language": "en",
+  "expected": [
+   {
+    "seedId": "s36",
+    "tier": 1
+   },
+   {
+    "seedId": "s01",
+    "tier": 2
+   },
+   {
+    "seedId": "s02",
+    "tier": 2
+   }
+  ]
+ },
+ {
+  "id": "q26",
+  "query": "artificial intelligence",
+  "group": "broad",
+  "language": "en",
+  "expected": [
+   {
+    "seedId": "s25",
+    "tier": 1
+   },
+   {
+    "seedId": "s06",
+    "tier": 2
+   },
+   {
+    "seedId": "s01",
+    "tier": 2
+   },
+   {
+    "seedId": "s05",
+    "tier": 2
+   },
+   {
+    "seedId": "s27",
+    "tier": 2
+   }
+  ]
+ },
+ {
+  "id": "q27",
+  "query": "cooking recipes",
+  "group": "broad",
+  "language": "en",
+  "expected": [
+   {
+    "seedId": "s11",
+    "tier": 1
+   },
+   {
+    "seedId": "s12",
+    "tier": 1
+   },
+   {
+    "seedId": "s28",
+    "tier": 2
+   }
+  ]
+ },
+ {
+  "id": "q28",
+  "query": "fitness and exercise",
+  "group": "broad",
+  "language": "en",
+  "expected": [
+   {
+    "seedId": "s13",
+    "tier": 1
+   },
+   {
+    "seedId": "s14",
+    "tier": 1
+   },
+   {
+    "seedId": "s29",
+    "tier": 2
+   },
+   {
+    "seedId": "s34",
+    "tier": 2
+   }
+  ]
+ },
+ {
+  "id": "q29",
+  "query": "money saving and investing",
+  "group": "broad",
+  "language": "en",
+  "expected": [
+   {
+    "seedId": "s15",
+    "tier": 1
+   },
+   {
+    "seedId": "s16",
+    "tier": 1
+   },
+   {
+    "seedId": "s30",
+    "tier": 2
+   },
+   {
+    "seedId": "s35",
+    "tier": 2
+   }
+  ]
+ },
+ {
+  "id": "q30",
+  "query": "history documentary",
+  "group": "broad",
+  "language": "en",
+  "expected": [
+   {
+    "seedId": "s17",
+    "tier": 1
+   },
+   {
+    "seedId": "s18",
+    "tier": 1
+   },
+   {
+    "seedId": "s31",
+    "tier": 2
+   }
+  ]
+ },
+ {
+  "id": "q31",
+  "query": "music for beginners",
+  "group": "broad",
+  "language": "en",
+  "expected": [
+   {
+    "seedId": "s19",
+    "tier": 1
+   },
+   {
+    "seedId": "s20",
+    "tier": 1
+   }
+  ]
+ },
+ {
+  "id": "q32",
+  "query": "learn programming coding",
+  "group": "broad",
+  "language": "en",
+  "expected": [
+   {
+    "seedId": "s07",
+    "tier": 1
+   },
+   {
+    "seedId": "s08",
+    "tier": 1
+   },
+   {
+    "seedId": "s33",
+    "tier": 1
+   },
+   {
+    "seedId": "s26",
+    "tier": 2
+   },
+   {
+    "seedId": "s09",
+    "tier": 2
+   },
+   {
+    "seedId": "s03",
+    "tier": 2
+   }
+  ]
+ },
+ {
+  "id": "q33",
+  "query": "exam preparation",
+  "group": "broad",
+  "language": "en",
+  "expected": [
+   {
+    "seedId": "s21",
+    "tier": 1
+   },
+   {
+    "seedId": "s22",
+    "tier": 2
+   },
+   {
+    "seedId": "s32",
+    "tier": 2
+   }
+  ]
+ },
+ {
+  "id": "q34",
+  "query": "large language models transformers",
+  "group": "broad",
+  "language": "en",
+  "expected": [
+   {
+    "seedId": "s25",
+    "tier": 1
+   },
+   {
+    "seedId": "s06",
+    "tier": 2
+   },
+   {
+    "seedId": "s01",
+    "tier": 2
+   }
+  ]
+ },
+ {
+  "id": "q35",
+  "query": "blogging and SEO",
+  "group": "broad",
+  "language": "en",
+  "expected": [
+   {
+    "seedId": "s23",
+    "tier": 1
+   }
+  ]
+ },
+ {
+  "id": "q36",
+  "query": "कृत्रिम बुद्धिमत्ता",
+  "group": "cross",
+  "language": "hi",
+  "expected": [
+   {
+    "seedId": "s27",
+    "tier": 1
+   },
+   {
+    "seedId": "s06",
+    "tier": 2
+   }
+  ]
+ },
+ {
+  "id": "q37",
+  "query": "मशीन लर्निंग कैसे सीखें",
+  "group": "cross",
+  "language": "hi",
+  "expected": [
+   {
+    "seedId": "s27",
+    "tier": 1
+   }
+  ]
+ },
+ {
+  "id": "q38",
+  "query": "दाल सब्ज़ी बनाना",
+  "group": "cross",
+  "language": "hi",
+  "expected": [
+   {
+    "seedId": "s28",
+    "tier": 1
+   }
+  ]
+ },
+ {
+  "id": "q39",
+  "query": "रोज़ व्यायाम सेहत",
+  "group": "cross",
+  "language": "hi",
+  "expected": [
+   {
+    "seedId": "s29",
+    "tier": 1
+   },
+   {
+    "seedId": "s13",
+    "tier": 2
+   }
+  ]
+ },
+ {
+  "id": "q40",
+  "query": "पैसे की बचत निवेश",
+  "group": "cross",
+  "language": "hi",
+  "expected": [
+   {
+    "seedId": "s30",
+    "tier": 1
+   },
+   {
+    "seedId": "s16",
+    "tier": 2
+   }
+  ]
+ },
+ {
+  "id": "q41",
+  "query": "भारत का इतिहास",
+  "group": "cross",
+  "language": "hi",
+  "expected": [
+   {
+    "seedId": "s31",
+    "tier": 1
+   },
+   {
+    "seedId": "s17",
+    "tier": 2
+   }
+  ]
+ },
+ {
+  "id": "q42",
+  "query": "GATE परीक्षा तैयारी",
+  "group": "cross",
+  "language": "hi",
+  "expected": [
+   {
+    "seedId": "s32",
+    "tier": 1
+   },
+   {
+    "seedId": "s21",
+    "tier": 2
+   }
+  ]
+ },
+ {
+  "id": "q43",
+  "query": "खाना बनाना रेसिपी",
+  "group": "cross",
+  "language": "hi",
+  "expected": [
+   {
+    "seedId": "s28",
+    "tier": 1
+   },
+   {
+    "seedId": "s11",
+    "tier": 2
+   }
+  ]
+ },
+ {
+  "id": "q44",
+  "query": "coding kaise seekhe",
+  "group": "cross",
+  "language": "hinglish",
+  "expected": [
+   {
+    "seedId": "s33",
+    "tier": 1
+   },
+   {
+    "seedId": "s07",
+    "tier": 2
+   }
+  ]
+ },
+ {
+  "id": "q45",
+  "query": "weight loss kaise kare ghar par",
+  "group": "cross",
+  "language": "hinglish",
+  "expected": [
+   {
+    "seedId": "s34",
+    "tier": 1
+   },
+   {
+    "seedId": "s13",
+    "tier": 2
+   }
+  ]
+ },
+ {
+  "id": "q46",
+  "query": "paisa kaise bachaye students",
+  "group": "cross",
+  "language": "hinglish",
+  "expected": [
+   {
+    "seedId": "s35",
+    "tier": 1
+   },
+   {
+    "seedId": "s16",
+    "tier": 2
+   },
+   {
+    "seedId": "s30",
+    "tier": 2
+   }
+  ]
+ },
+ {
+  "id": "q47",
+  "query": "Claude AI kaise use kare",
+  "group": "cross",
+  "language": "hinglish",
+  "expected": [
+   {
+    "seedId": "s36",
+    "tier": 1
+   },
+   {
+    "seedId": "s01",
+    "tier": 1
+   },
+   {
+    "seedId": "s04",
+    "tier": 2
+   }
+  ]
+ },
+ {
+  "id": "q48",
+  "query": "programming seekhna beginner roadmap",
+  "group": "cross",
+  "language": "hinglish",
+  "expected": [
+   {
+    "seedId": "s33",
+    "tier": 1
+   },
+   {
+    "seedId": "s26",
+    "tier": 2
+   }
+  ]
+ },
+ {
+  "id": "q49",
+  "query": "paisa bachana saving tips",
+  "group": "cross",
+  "language": "hinglish",
+  "expected": [
+   {
+    "seedId": "s35",
+    "tier": 1
+   },
+   {
+    "seedId": "s30",
+    "tier": 2
+   }
+  ]
+ },
+ {
+  "id": "q50",
+  "query": "coding practice roz projects",
+  "group": "cross",
+  "language": "hinglish",
+  "expected": [
+   {
+    "seedId": "s33",
+    "tier": 1
+   }
+  ]
+ }
+]
